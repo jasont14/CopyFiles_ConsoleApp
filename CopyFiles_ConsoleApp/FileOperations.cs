@@ -120,7 +120,7 @@ namespace CopyFiles_ConsoleApp
                 {
                     try
                     {
-                        File.Copy(CopyFromRoot + file, CopyToRoot + kk++.ToString() + ".jpg");
+                        File.Copy(CopyFromRoot + file, CopyToRoot + file);
                         myLog.WriteToLogFile("Copied " + CopyFromRoot + file + " To " + CopyToRoot + file);
                         result++;
                     }

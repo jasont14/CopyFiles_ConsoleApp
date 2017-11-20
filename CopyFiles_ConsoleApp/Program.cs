@@ -1,8 +1,7 @@
 ﻿/* 
  * J.Thatcher
  * Copy Files - Console App from A to B
- * Classes, Fields, Methods, Queues, Arrays, List<T>, Iterations, Error Handling, IO, Settings
- * 
+ * Classes, Fields, Methods, Queues, Arrays, List<T>, Iterations, Limited Error Handling, IO, Text File, App Settings * 
  */
 
 
@@ -60,10 +59,11 @@ namespace CopyFiles_ConsoleApp
         //Check to see if origin and remote directories exist...
         private static bool CheckDefaultDirectoriesExist()
         {
-            bool result;
-            bool CheckOriginDirectory = true;
-            bool CheckRemoteDirectory = true;
-
+            bool result, CheckOriginDirectory, CheckRemoteDirectory;            
+            
+            CheckOriginDirectory = Directory.Exists(UserSettings.Default.OriginDirectory);
+            CheckRemoteDirectory = Directory.Exists(UserSettings.Default.RemoteDirectory);
+            
             if (CheckOriginDirectory && CheckRemoteDirectory)
             {
                 result = true;
@@ -145,9 +145,9 @@ namespace CopyFiles_ConsoleApp
         static int MainMenu()
         {
             string Header = "CONSOLE FILE COPY UTILITY";
-            string Message1 = "Max File Size Set To MB";
-            string Message2 = "Origin Directory: Origin";
-            string Message3 = "Destination Directory: ";
+            string Message1 = "Max File Size Set To (Bytes)" + UserSettings.Default.MaxFileSize.ToString("N0");
+            string Message2 = "Origin Directory: " + UserSettings.Default.OriginDirectory;
+            string Message3 = "Destination Directory: "+ UserSettings.Default.RemoteDirectory;
             string Message4 = "Option 1 => Run File Copy Now";
             string Message5 = "Option 2 => Change File Copy Settings";
             string Message6 = "Option 9 => Exit Now";
