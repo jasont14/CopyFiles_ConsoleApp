@@ -8,7 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConsoleFileCopy {
+namespace CopyFiles_ConsoleApp
+{
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

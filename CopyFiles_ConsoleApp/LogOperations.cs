@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace SimpleFileCopy
+namespace CopyFiles_ConsoleApp
 {
     class LogOperations
     {

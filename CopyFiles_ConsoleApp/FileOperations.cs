@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Configuration;
 
-namespace SimpleFileCopy
+namespace CopyFiles_ConsoleApp
 {
     class FileOperations
     {  

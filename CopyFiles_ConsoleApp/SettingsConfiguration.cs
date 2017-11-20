@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.IO;
 
-namespace SimpleFileCopy
+namespace CopyFiles_ConsoleApp
 {
     public class SettingsConfiguration
     {
